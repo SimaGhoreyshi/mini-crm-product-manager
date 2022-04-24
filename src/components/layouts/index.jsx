@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Anchor, Span } from "..";
 import { colors } from "../../assets";
+import { LogoPersian } from "../../common";
 
 const headerBg = colors.headerBackground;
 const mainBg = colors.mainBackground;
@@ -39,6 +40,8 @@ const HeaderContent = styled.div`
 const Left = styled.span`
   margin-right: auto;
   display: inline-flex;
+  max-height: 3rem;
+  max-width: 6rem;
 `;
 
 const Content = styled.div`
@@ -70,7 +73,7 @@ export const MainLayout = ({ children }) => {
               margin="0 0 0 1.5%"
               color={greyishText}
             >
-              {/* مدیریت محصولات مشتریان ترابرنت */}
+              مدیریت امور مشتریان ترابرنت
             </Span>
 
             {headerLinks?.map((headerLink) => (
@@ -87,7 +90,9 @@ export const MainLayout = ({ children }) => {
               </Anchor>
             ))}
           </>
-          <Left></Left>
+          <Left>
+            <LogoPersian />
+          </Left>
         </HeaderContent>
       </Header>
 
