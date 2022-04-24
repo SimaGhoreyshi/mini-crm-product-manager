@@ -1,11 +1,17 @@
 import styled, { css } from "styled-components";
-import { fontFaces } from "../../assets";
+import { colors, fontFaces } from "../../assets";
+
+const secondary = colors.secondary;
 
 export const Anchor = styled.a`
   ${fontFaces}
   font-family: IRANSans;
   letter-spacing: normal;
   font-stretch: normal;
+
+  &:hover {
+    color: ${secondary};
+  }
 
   ${({ margin }) =>
     margin &&
