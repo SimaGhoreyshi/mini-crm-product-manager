@@ -117,6 +117,21 @@ export const Text = css`
     css`
       align-items: ${alignItems};
     `};
+
+  ${({ ellipses }) =>
+    ellipses &&
+    css`
+      max-width: 90%;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      /* 
+      &:hover {
+        overflow: unset !important;
+        white-space: unset !important;
+        word-wrap: break-word;
+      } */
+    `}
 `;
 
 export const Span = styled.span`

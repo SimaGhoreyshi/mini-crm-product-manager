@@ -9,7 +9,7 @@ const Container = styled.main`
   grid-auto-flow: row;
   grid-template-columns: repeat(3, minmax(30%, 35rem));
   grid-template-rows: repeat(auto);
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   width: 100%;
 `;
 
@@ -34,13 +34,19 @@ export const ItemsList = () => {
   if (loading) {
     return <Span>loading</Span>;
   }
+  console.log(products);
+
   //if no error and loading completed
   return (
     <Container>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
+      {products?.map((product) => (
+        <Card
+          key={product?.id}
+          image={product?.image}
+          title={product?.title}
+          id={product?.id}
+        />
+      ))}
     </Container>
   );
 };

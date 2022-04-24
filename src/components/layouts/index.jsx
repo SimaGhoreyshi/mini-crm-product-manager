@@ -4,7 +4,7 @@ import { colors } from "../../assets";
 
 const headerBg = colors.headerBackground;
 const mainBg = colors.mainBackground;
-const greyishBrown = colors.greyishBrown;
+const greyishText = colors.greyishText;
 
 const MainLayoutContainer = styled.div`
   min-height: 100vh;
@@ -68,9 +68,9 @@ export const MainLayout = ({ children }) => {
               size="1.25"
               lineHeight="2"
               margin="0 0 0 1.5%"
-              color={greyishBrown}
+              color={greyishText}
             >
-              مدیریت محصولات مشتریان ترابرنت
+              {/* مدیریت محصولات مشتریان ترابرنت */}
             </Span>
 
             {headerLinks?.map((headerLink) => (
@@ -80,7 +80,7 @@ export const MainLayout = ({ children }) => {
                 lineHeight="2"
                 margin="0 1.5%"
                 textDecoration="none"
-                color={greyishBrown}
+                color={greyishText}
                 href={headerLink?.href}
               >
                 {headerLink?.title}

@@ -6,18 +6,7 @@ import {
 import { httpFail, httpStart, updateObject } from "../storeUtils";
 
 const initialState = {
-  products: {
-    id: null,
-    title: "",
-    price: 0,
-    description: "",
-    category: null,
-    image: "",
-    rating: {
-      rate: 0,
-      count: 0,
-    },
-  },
+  products: [],
   error: null,
   loading: false,
 };
