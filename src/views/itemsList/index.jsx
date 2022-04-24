@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { Card, Span } from "../../components";
@@ -21,7 +21,7 @@ export const ItemsList = () => {
 
   useEffect(() => {
     onFetchProductsList();
-  }, []);
+  });
 
   const { error, loading, products } = useSelector(
     (state) => state?.productsList
