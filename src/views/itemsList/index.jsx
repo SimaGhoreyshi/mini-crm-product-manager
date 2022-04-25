@@ -19,23 +19,20 @@ export const ItemsList = () => {
     return dispatch(fetchProductsList());
   }, [dispatch]);
 
-  useEffect(() => {
-    debugger;
-    onFetchProductsList();
-  }, [onFetchProductsList]);
-
   const { error, loading, products } = useSelector(
     (state) => state?.productsList
   );
 
-  if (error) {
-    return <Span textAlign="center">خطایی رخ داد</Span>;
-  }
+  useEffect(() => {
+    if (!products || !products?.length) onFetchProductsList();
+  }, [onFetchProductsList, products]);
+
+  if (error) return <Span center>خطایی رخ داد</Span>;
+
   //if no error
   if (loading) {
     return <Spinner />;
   }
-  console.log(products);
 
   //if no error and loading completed
   return (
