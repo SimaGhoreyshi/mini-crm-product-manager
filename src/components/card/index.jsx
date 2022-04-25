@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const paleScondary = colors.pale.paleSecondary;
 const secondary = colors.secondary;
+const mildGrey = colors.mildGrey;
 
 const CardContainer = styled.div`
   border-radius: 1rem;
@@ -16,6 +17,7 @@ const CardContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   min-height: 15rem;
+  box-shadow: 0 0 1rem ${mildGrey};
 
   svg.logo-sun {
     visibility: hidden;
@@ -31,18 +33,19 @@ const CardContainer = styled.div`
     bottom: 0;
     right: 0;
     transform: rotate(180deg);
-    overflow: hidden;
   }
 
   :hover {
     cursor: pointer;
-    filter: drop-shadow(0 0 1rem ${paleScondary});
+    box-shadow: 0 0 2rem ${paleScondary};
     transform: scale(1.1);
 
+    span {
+      color: ${paleScondary};
+    }
     svg.logo-sun {
       visibility: visible;
     }
-
     & > img {
       opacity: 0.5;
     }
