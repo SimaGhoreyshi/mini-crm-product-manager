@@ -61,20 +61,25 @@ export const MainLayout = ({ children }) => {
     },
   ];
 
+  const Title = styled.span`
+    font-weight: bold;
+    font-size: clamp(1rem, 100%, 1.5rem);
+    line-height: 2;
+    margin-left: 1.5%;
+    color: ${textColor};
+    font-family: IRANSans;
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  `;
+
   return (
     <MainLayoutContainer>
       <Header>
         <HeaderContent>
           <>
-            <Span
-              bold
-              size="1.25"
-              lineHeight="2"
-              margin="0 0 0 1.5%"
-              color={textColor}
-            >
-              مدیریت امور مشتریان ترابرنت
-            </Span>
+            <Title>مدیریت امور مشتریان ترابرنت</Title>
 
             {headerLinks?.map((headerLink) => (
               <Anchor

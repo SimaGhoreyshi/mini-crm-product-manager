@@ -11,6 +11,13 @@ const Container = styled.main`
   grid-template-rows: repeat(auto);
   grid-gap: 2rem;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(10rem, 35rem));
+  }
+  @media screen and (max-width: 480px) {
+    grid-template-columns: repeat(1, minmax(10rem, 35rem));
+  }
 `;
 
 export const ItemsList = () => {

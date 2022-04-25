@@ -13,6 +13,11 @@ const Container = styled.div`
   padding: 2rem;
   grid-template-areas: "details imageAndPrice" "desc desc";
   grid-template-columns: auto 15rem;
+
+  @media screen and (max-width: 720px) {
+    grid-template-areas: "imageAndPrice" "details" " desc";
+    grid-template-columns: auto;
+  }
 `;
 
 const Details = styled.div`
@@ -37,6 +42,7 @@ const IamgeAndPrice = styled.div`
 const Image = styled.img`
   width: 100%;
   margin-bottom: 1rem;
+  max-width: 15rem;
 `;
 
 const Description = styled.div`
