@@ -1,5 +1,8 @@
 import styled, { css } from "styled-components";
+import { colors } from "../assets";
 import { fontFaces } from "../assets/fonts";
+
+const primary = colors.primary;
 
 export const Text = css`
   ${fontFaces}
@@ -51,7 +54,7 @@ export const Text = css`
     css`
       font-weight: ${fontWeight};
     `};
-  ${({ color }) =>
+  ${({ color = primary }) =>
     color &&
     css`
       color: ${color};
@@ -131,7 +134,20 @@ export const Text = css`
         white-space: unset !important;
         word-wrap: break-word;
       } */
-    `}
+    `};
+
+  ${({ center }) =>
+    center &&
+    css`
+      display: flex;
+      justify-content: center;
+    `};
+
+  ${({ shadow }) =>
+    shadow &&
+    css`
+      text-shadow: ${shadow};
+    `};
 `;
 
 export const Span = styled.span`
