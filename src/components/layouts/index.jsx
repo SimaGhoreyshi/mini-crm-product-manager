@@ -5,20 +5,21 @@ import { LogoPersian } from "../../common";
 
 const headerBg = colors.headerBackground;
 const mainBg = colors.mainBackground;
-const greyishText = colors.greyishText;
+const textColor = colors.text;
 
 const MainLayoutContainer = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 4.5rem);
   max-width: 100vw;
   background-color: ${mainBg};
 `;
 
-const Header = styled.header`
+const Header = styled.div`
   display: flex;
   position: fixed;
   top: 0;
   width: 100vw;
   height: 4.5rem;
+  padding: 0 10%;
   box-sizing: border-box;
   background-color: ${headerBg};
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
@@ -27,7 +28,6 @@ const Header = styled.header`
   align-items: center;
   justify-content: center;
   z-index: 100;
-  padding: 0 10%;
 `;
 
 const HeaderContent = styled.div`
@@ -71,7 +71,7 @@ export const MainLayout = ({ children }) => {
               size="1.25"
               lineHeight="2"
               margin="0 0 0 1.5%"
-              color={greyishText}
+              color={textColor}
             >
               مدیریت امور مشتریان ترابرنت
             </Span>
@@ -83,7 +83,7 @@ export const MainLayout = ({ children }) => {
                 lineHeight="2"
                 margin="0 1.5%"
                 textDecoration="none"
-                color={greyishText}
+                color={textColor}
                 href={headerLink?.href}
               >
                 {headerLink?.title}
