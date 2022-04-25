@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Anchor, Span } from "..";
+import { Anchor } from "..";
 import { colors } from "../../assets";
 import { LogoPersian } from "../../common";
 
